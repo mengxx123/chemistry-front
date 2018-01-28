@@ -1,0 +1,519 @@
+/**/
+.input-box {
+
+}
+.input-box .tip {
+    margin-bottom: 16px;
+    color: #999;
+}
+.input-box textarea {
+    margin-bottom: 16px;
+}
+/**/
+.result-box .info {
+    margin-bottom: 16px;
+}
+/**/
+.list-common {
+    padding-left: 16px;
+}
+.list-common li {
+    list-style: disc;
+}
+
+/**/
+.main {
+    padding: 16px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+
+.main dl {
+    float: left;
+    display: block;
+    width: 576px;
+    margin-bottom: 4px;
+    height: 45px;
+    position: relative;
+    margin-left: 8px;
+}
+
+.main dt {
+    position: absolute;
+    left: -16px;
+    top: 15px;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.main dd {
+    display: block;
+    float: left;
+    margin: 0;
+    width: 32px;
+    border-left: 1px solid #000;
+    border-top: 1px solid #000;
+    height: 50px;
+    font-size: 14px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.col-index {
+    color: #666;
+    border: none !important;
+}
+.col-index:hover {
+    background-color: transparent !important;
+}
+.col-index span {
+    line-height: 60px !important;
+}
+.r {
+    border-right: 1px solid #000;
+}
+
+.b {
+    border-bottom: 1px solid #000;
+}
+
+em {
+    font-style: normal;
+    display: block;
+    float: left;
+    margin-right: -12px;
+    margin-left: 4px;
+}
+
+#legend {
+    position: absolute;
+    width: 300px;
+    left: 120px;
+    top: 60px;
+    z-index: 999;
+    overflow: hidden;
+}
+#legend .state span {
+    float: left;
+}
+#legend dl {
+    height: 40px;
+    margin: 0;
+    overflow: hidden;
+}
+#legend dd {
+    height: 40px;
+    width: 56px;
+    font-size: 12px;
+    line-height: 40px;
+    cursor: pointer;
+}
+#legend dd:Hover {
+    background-color: #fff;
+}
+#legend span {
+    padding: 5px 3px 5px 3px;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+#legend span:hover {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#list {
+    margin-left: 16px;
+}
+#list dd span {
+    display: block;
+    line-height: 15px;
+    overflow: Hidden;
+    width: 100%
+}
+#list dd:hover {
+    background: #fff;
+}
+
+#list dd a {
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    width: 28px;
+    height: 44px;
+    color: #000;
+}
+
+#l8 {
+    margin-top: 15px;
+}
+
+#l7 dd, #l9 dd {
+    border-bottom: 1px solid #000;
+}
+
+#l8 dd, #l9 dd {
+    width: 31px;
+}
+
+#d2, #d3, #d4, #d5, #d6, #d7, #d8, #d9, #d10, #d11, #d12, #d13, #d14, #d15, #d16, #d17, #d21, #d22, #d23, #d24, #d25, #d26, #d27, #d28, #d29, #d30, #d39, #d40, #d41, #d42, #d43, #d44, #d45, #d46, #d47, #d48 {
+    border-color: #fff;
+    cursor: default;
+}
+
+#d2 span, #d3 span, #d4 span, #d5 span, #d6 span, #d7 span, #d8 span, #d9 span, #d10 span, #d11 span, #d12 span, #d13 span, #d14 span, #d15 span, #d16 span, #d17 span, #d21 span, #d22 span, #d23 span, #d24 span, #d25 span, #d26 span, #d27 span, #d28 span, #d29 span, #d30 span, #d39 span, #d40 span, #d41 span, #d42 span, #d43 span, #d44 span, #d45 span, #d46 span, #d47 span, #d48 span {
+    display: block;
+    width: 100%;
+    height: 45px;
+    margin-top: -1px;
+}
+
+#d2, #d21, #d39 {
+    border-left: 1px solid #000;
+}
+
+#d2, #d21, #d39 {
+    border-top: 0;
+    padding-top: 1px;
+}
+
+.fjs {
+    background: #9DFEFE;
+}
+
+.jjs {
+    background: #FD9F9F;
+}
+
+.jtjs {
+    background: #FEBD5F;
+}
+
+.dxqt {
+    background: #FEBDFD;
+}
+
+.ls {
+    background: #B8B8FE;
+}
+
+.zjs {
+    background: #67E46E;
+}
+
+.ljs {
+    background: #7EFE85;
+}
+
+.gdys {
+    background: #FEFE9C;
+}
+
+.lxys {
+    background: #FFBFA2;
+}
+
+.axys {
+    background: #FEDEBD;
+}
+
+.qt {
+    color: #F00;
+}
+
+.yt {
+    color: #00F;
+}
+
+.gt {
+    color: #000;
+}
+
+.hcys {
+    color: #94179D;
+}
+
+.wzys {
+    color: #999;
+}
+
+.wz {
+    background: #eee;
+}
+
+.fsx {
+}
+
+#list .qt {
+    color: #f00;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+#list .yt {
+    color: #00f;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+#list .gt {
+    color: #000;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+#list .hcys {
+    color: #94179D;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+#list .wzys {
+    color: #999;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+#l8 dd:Hover, #l9 dd:Hover {
+    background: #fff;
+}
+
+.ls0, .ls2 {
+    font-size: 10px;
+    -webkit-text-size-adjust: none;
+}
+
+.ls3 {
+    font-size: 8px;
+    -webkit-text-size-adjust: none;
+}
+
+#a1, #a2, #a3, #a4, #a5, #a6, #a7, #a8, #a9, #a10, #a11, #a12, #a13, #a14, #a15, #a16, #a17, #a18 {
+    position: absolute;
+    z-index: 998;
+    font-size: 14px;
+    margin-left: -12px;
+}
+
+#a1 {
+    left: 23px;
+    top: 25px;
+}
+
+#a2 {
+    left: 57px;
+    top: 70px;
+}
+
+#a3 {
+    left: 86px;
+    top: 160px;
+}
+
+#a4 {
+    left: 115px;
+    top: 160px;
+}
+
+#a5 {
+    left: 144px;
+    top: 160px;
+}
+
+#a6 {
+    left: 173px;
+    top: 160px;
+}
+
+#a7 {
+    left: 202px;
+    top: 160px;
+}
+
+#a8 {
+    left: 231px;
+    top: 160px;
+}
+
+#a9 {
+    left: 260px;
+    top: 160px;
+}
+
+#a10 {
+    left: 289px;
+    top: 160px;
+}
+
+#a11 {
+    left: 318px;
+    top: 160px;
+}
+
+#a12 {
+    left: 343px;
+    top: 160px;
+}
+
+#a13 {
+    left: 372px;
+    top: 70px;
+}
+
+#a14 {
+    left: 401px;
+    top: 70px;
+}
+
+#a15 {
+    left: 430px;
+    top: 70px;
+}
+
+#a16 {
+    left: 459px;
+    top: 70px;
+}
+
+#a17 {
+    left: 488px;
+    top: 70px;
+}
+
+#a18 {
+    left: 517px;
+    top: 25px;
+}
+
+#tips {
+    position: relative;
+    margin-bottom: 16px;
+    background: #FAF3EB;
+    z-index: 1100;
+    border: 1px solid #CAC2AD;
+    padding: 16px;
+}
+
+#tips span {
+    padding: 0;
+    margin: 0;
+    display: block;
+    height: 23px;
+    line-height: 23px;
+    font-size: 14px;
+}
+
+#tips #t_na {
+    font-family: "΢���ź�", "����";
+    font-size: 20px;
+    float: left;
+}
+
+#tips #t_s {
+    font-family: "΢���ź�", "����";
+    font-size: 16px;
+    float: left;
+    margin-left: 5px;
+}
+
+#tips #t_ei, #tips #t_ci {
+    position: absolute;
+    right: 16px;
+    color: #CAC2AD;
+    text-align: center;
+    font-size: 12px;
+    border: 1px solid #CAC2AD;
+    width: 89px;
+    height: 89px;
+    overflow: hidden;
+}
+#tips #t_ei img {
+    width: 89px;
+    height: 89px;
+}
+
+#tips #t_nu {
+    clear: left;
+}
+
+#tips #enter {
+    margin-top: -8px;
+    font-size: 12px;
+    color: #CAC2AD;
+    width: 240px;
+    text-align: right;
+}
+
+#tips u {
+    cursor: pointer;
+    color: blue;
+}
+
+.w {
+    background-color: #fff;
+}
+
+#leg {
+    background: #FAF3EB;
+    border: 1px solid #CAC2AD;
+    padding: 10px;
+    overflow: auto;
+}
+
+#leg span {
+    display: block;
+    float: left;
+    overflow: Hidden;
+}
+
+#leg_t {
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.leg_n {
+    width: 184px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 14px;
+    text-align: left;
+}
+
+.leg_n img {
+    display: block;
+    float: left;
+    margin-right: 10px;
+}
+
+#leg_f {
+    width: 100%;
+    margin-top: 5px;
+    line-height: 20px;
+}
+
+#leg em {
+    position: absolute;
+    left: 360px;
+    top: 0;
+    cursor: pointer;
+}
+
+.f {
+    float: right;
+    margin-left: -7px;
+    margin-top: -6px;
+    font-size: 10px;
+}
+
+#details {
+    position: absolute;
+    width: 500px;
+    height: 360px;
+    background: #fff;
+    z-index: 2001;
+    left: 20px;
+    top: 80px;
+    border: 1px solid #000;
+    display: None;
+}
