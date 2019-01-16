@@ -1,9 +1,11 @@
 <template>
-    <ui-page :title="title || page.title" ref="page">
+    <ui-page :title="title || page.title" :page="page" ref="page">
         <div slot="drawer">
-            <ui-appbar title=""></ui-appbar>
+            <div class="header">
+                <img class="logo" src="/static/chemistry.svg">
+            </div>
             <ui-list @itemClick="toggle()">
-                <ui-list-item title="元素周期表" to="/">
+                <ui-list-item title="首页" to="/">
                     <ui-icon slot="left" value="grade"/>
                 </ui-list-item>
             </ui-list>
@@ -56,10 +58,19 @@
 </script>
 
 <style lang="scss" scoped>
-    .ui-position-bottom {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-    }
+.header {
+    padding: 40px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+.logo {
+    display: block;
+    width: 80px;
+    margin: 0 auto;
+}
+.ui-position-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
 </style>
