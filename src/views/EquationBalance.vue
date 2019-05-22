@@ -1,18 +1,20 @@
 <template>
     <my-page title="化学方程式配平" :page="page">
-        <!-- <div class="input">
-            <p>List reagents, separated by commas: 
-                <input type="text" v-model="reagents" class="reagents" value=""></p>
-            <p>List products, separated by commas: 
-                <input v-model="products" type="text" class="products" value=""></p>
-        </div> -->
+        <div class="common-container container">
+            <!-- <div class="input">
+                <p>List reagents, separated by commas: 
+                    <input type="text" v-model="reagents" class="reagents" value=""></p>
+                <p>List products, separated by commas: 
+                    <input v-model="products" type="text" class="products" value=""></p>
+            </div> -->
 
-        <textarea class="form-control" v-model="exp" rows="6" placeholder="化学方程式，如："></textarea>
-        <div class="btns">
-            <ui-raised-button class="btn" primary label="配平" @click="balance" />
+            <textarea class="form-control" v-model="exp" rows="6" placeholder="化学方程式，如："></textarea>
+            <div class="btns">
+                <ui-raised-button class="btn" primary label="配平" @click="balance" />
+            </div>
+            <div class="result equation" v-html="result" v-if="result"></div>
+            <!-- <textarea class="form-control" v-model="result" rows="6" placeholder="结果" disabled v-if="result"></textarea> -->
         </div>
-        <div class="result equation" v-html="result" v-if="result"></div>
-        <!-- <textarea class="form-control" v-model="result" rows="6" placeholder="结果" disabled v-if="result"></textarea> -->
     </my-page>
 </template>
 

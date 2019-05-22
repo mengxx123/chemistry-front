@@ -1,9 +1,11 @@
 <template>
     <my-page title="摩尔质量计算器">
-        <ui-text-field v-model="exp" label="化学式" hintText="如：NaCl" />
-        <br>
-        <ui-raised-button class="btn" label="计算" primary @click="calculate" />
-        <div v-if="result">{{ result }}</div>
+        <div class="common-container container">
+            <ui-text-field v-model="exp" label="化学式" hintText="如：NaCl" />
+            <br>
+            <ui-raised-button class="btn" label="计算" primary @click="calculate" />
+            <div v-if="result">{{ result }}</div>
+        </div>
     </my-page>
 </template>
 

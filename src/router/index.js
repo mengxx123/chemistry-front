@@ -3,7 +3,6 @@ import Router from 'vue-router'
 
 const Home = resolve => require(['@/views/Home'], resolve)
 const Table = resolve => require(['@/views/Table'], resolve)
-const About = resolve => require(['@/views/About'], resolve)
 const MolarMass = resolve => require(['@/views/MolarMass'], resolve)
 const EquationBalance = resolve => require(['@/views/EquationBalance'], resolve)
 const Error404 = resolve => require(['@/views/error/Error404'], resolve)
@@ -18,10 +17,6 @@ let routes = [
     {
         path: '/table',
         component: Table
-    },
-    {
-        path: '/about',
-        component: About
     },
     {
         path: '/molar_mass',
