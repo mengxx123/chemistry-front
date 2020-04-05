@@ -1,5 +1,5 @@
 <template>
-    <my-page title="化学方程式配平" :page="page">
+    <my-page title="化学方程式配平（专业版）" :page="page">
         <div class="common-container container">
             <!-- <div class="input">
                 <p>List reagents, separated by commas: 
@@ -39,15 +39,7 @@
                         </tr>
                     </table>
 
-                    <h2>调试：矩阵</h2>
-
-                    <table>
-                        <tr v-for="row in result.table">
-                            <td v-for="col in row">
-                                <div>{{ col }}</div>
-                            </td>
-                        </tr>
-                    </table>
+                    <!-- <h2>调试</h2> -->
 
 
                 </ui-article>
@@ -60,7 +52,7 @@
 <script>
     /* eslint-disable */
     import {balanceEq, format} from '../util/balance/'
-    import { getResult, } from '../util/chemistry/balance'
+    import { getResult, } from '../util/chemistry/balancePro'
     const molarmass = require('molarmass')
     import { algebra } from 'mathjs'
 
@@ -75,13 +67,109 @@
     // let balanceEq2 = require('chem-eb')
     // console.log(balanceEq2('P+O2=P2O5'))
 
+    class ChemicalC {
+        constructor(exp) {
+            this.exp = exp
+            let stack = [
+                {},
+            ]
+            
+            let tmp = ''
+            function add(elem, num = 1) {
+                let elems = stack[stack.length - 1]
+                console.log('index', stack.length - 1)
+                console.log('add', elem)
+                let match = elem.match(/[\d]+/)
+                let _elem = elem
+                if (match) {
+                    console.log('match', match)
+                    _elem = elem.replace(match[0], '')
+                    num = parseInt(match[0])
+                }
+                // let findedItem = elems.find(item => ite)
+                if (!elems[_elem]) {
+                    elems[_elem] = {
+                        number: num,
+                        elec: 0,
+                    }
+                } else {
+                    elems[_elem].number += num
+                }
+            }
+            for (let i = 0; i < exp.length; i++) {
+                let char = exp[i]
+
+                if (char === '(') {
+                    if (tmp) {
+                        add(tmp)
+                        tmp = ''
+                    }
+                    stack.push({})
+                } else if (char === ')') {
+
+                } else if (char.match(/\d/)) {
+                    let last = i+1
+                    while (last < exp.length - 1) {
+                        console.log('exp[last]', exp[last])
+                        if (exp[last].match(/\d/)) {
+                            console.log('匹配')
+                            last++
+                        } else {
+                            break
+                        }
+                        let idx = last - 1
+                        let num = parseInt(exp.substring(i ,idx + 1))
+                        console.log('_num', num)
+                        if (tmp) {
+                            add(tmp, num)
+                            tmp = ''
+                            i = idx
+                        }
+                    }
+                                                                        
+                    console.log('last', last)
+                } else {
+                    if (i !== 0 && char.match(/[A-Z]/)) {
+                        if (tmp) {
+                            add(tmp)
+                            tmp = ''
+                        }
+                    }
+                    tmp += char
+                    
+                }
+
+                // if (i === exp.length - 1) {
+                //     add(tmp)
+                // }
+                
+            }
+            if (tmp) {
+                console.log('lastTmp', tmp)
+                add(tmp)
+            }
+            console.log('stack', stack)
+            // this.elems = elems
+        }
+    }
+
+    function testing(a, b) {
+        if (a === b) {
+            
+        } else {
+            console.error('error', a, b)
+        }
+    }
+    // testing(new ChemicalC('FeC').elems['Fe'], 1)
+    console.log(new ChemicalC('Fe23C33'))
+
     export default {
         data () {
             return {
                 // reagents: 'Fe,Cl2',
                 // products: 'FeCl3',
                 exp: 'Fe + Cl2 = FeCl3',
-                // exp: 'Na2CO3 + HCl = NaCl + H2O + CO2',
+                // exp: 'Fe{3+} + I{-} = Fe{2+} + I2',
                 // exp: 'Cu + H(NO3) = Cu(NO3)2 + NO2 + H2O',
                 result: null,
                 page: {
@@ -99,7 +187,7 @@
         },
         mounted() {
             this.init()
-            this.debug()
+            // this.debug()
         },
         methods: {
             mMass(item) {
@@ -156,7 +244,6 @@
                     exp: ret.exp,
                     leftResults,
                     rightResults,
-                    table: ret.table,
                 }
                 console.log('this.result', this.result)
             },

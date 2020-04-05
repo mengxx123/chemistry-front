@@ -5,6 +5,7 @@ const Home = resolve => require(['@/views/Home'], resolve)
 const Table = resolve => require(['@/views/Table'], resolve)
 const MolarMass = resolve => require(['@/views/MolarMass'], resolve)
 const EquationBalance = resolve => require(['@/views/EquationBalance'], resolve)
+const Balance = resolve => require(['@/views/Balance'], resolve)
 const Error404 = resolve => require(['@/views/error/Error404'], resolve)
 
 Vue.use(Router)
@@ -25,6 +26,10 @@ let routes = [
     {
         path: '/equation_balance',
         component: EquationBalance
+    },
+    {
+        path: '/balance',
+        component: Balance
     },
     {
         path: '*',

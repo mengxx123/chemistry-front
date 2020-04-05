@@ -31,6 +31,12 @@
                                 desc: '',
                                 icon: '/static/chemistry.svg',
                                 to: '/equation_balance'
+                            },
+                            {
+                                name: '化学方程式配平',
+                                desc: '专业版，开发中',
+                                icon: '/static/chemistry.svg',
+                                to: '/balance'
                             }
                         ]
                     }

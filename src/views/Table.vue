@@ -1,5 +1,5 @@
 <template>
-    <my-page title="元素周期表">
+    <my-page title="元素周期表" :page="page">
         <div class="common-container container">
             <div id="input-box" class="row">
                 <div class="col-sm-8">
@@ -308,6 +308,17 @@
     export default {
         data () {
             return {
+                page: {
+                    menu: [
+                        {
+                            type: 'icon',
+                            icon: 'help',
+                            href: 'https://project.yunser.com/products/f838aa00554c11eaa20029984370e1fd',
+                            target: '_blank',
+                            title: '帮助'
+                        }
+                    ]
+                }
             }
         },
         mounted() {
